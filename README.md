@@ -38,6 +38,7 @@ module : {
 **delimiter**
 
 Tells the loader which delimiter is used to seperate the data. *Default: ','*
+
 Examples:
 ``` javascript
 var data = require('dsv?delimiter=;!./data.csv'); //load data seperated by semicolon
@@ -47,5 +48,5 @@ var data = require('dsv?delimiter=x!./data.csv'); //load data seperated by an 'x
 
 ## Credits
 
-* Inspired by json-loader
-* CSV parsing taken from d3
+* Inspired by webpack's [json-loader](https://github.com/webpack/json-loader)
+* DSV parsing taken from [dsv](https://github.com/mbostock/dsv) by Mike Bostock
