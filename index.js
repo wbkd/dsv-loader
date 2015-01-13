@@ -1,7 +1,7 @@
 /*  dsv-loader: a dsv loader for webpack
     built using dsv by Mike Bostock */
 
-var loaderUtils = require("loader-utils");
+var loaderUtils = require('loader-utils');
 var dsv = require('dsv');
 
 module.exports = function(text) {
@@ -11,5 +11,5 @@ module.exports = function(text) {
       parser = dsv(delimiter),
       res = parser.parse(text);
 
-  return "module.exports = " + JSON.stringify(res);
+  return 'module.exports = ' + JSON.stringify(res);
 }
