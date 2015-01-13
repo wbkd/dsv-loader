@@ -1,11 +1,38 @@
 {
   "name": "dsv-loader",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "description": "A webpack module to load dsv (e.g. .csv or .tsv) files.",
+  "keywords": ["webpack", "loader", "dsv", "csv", "tsv"],
   "author": {
-    "name": "Christopher Moeller @chrtze"
+    "name": "webkid.io",
+    "email": "hi@webkid.io",
+    "web": "http://twitter.com/webk1d"
+  },
+  "bugs": {
+    "url" : "https://github.com/wbkd/dsv-loader/issues"
   },
   "dependencies": {
     "dsv": "0.0.4",
     "loader-utils": "^0.2.6"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wbkd/dsv-loader.git"
+  },
+  "contributors": [
+    {
+      "name": "Moritz Klack",
+      "web": "http://twitter.com/moklick"
+    },
+    {
+      "name": "Christopher Möller",
+      "web": "http://twitter.com/chrtze"
+    }
+  ],
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/mit-license.html"
+    }
+  ]
 }
