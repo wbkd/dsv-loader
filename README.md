@@ -49,4 +49,4 @@ var data = require('dsv?delimiter=x!./data.csv'); //load data seperated by an 'x
 ## Credits
 
 * Inspired by webpack's [json-loader](https://github.com/webpack/json-loader)
-* DSV parsing taken from [dsv](https://github.com/mbostock/dsv) by Mike Bostock
+* DSV parsing done with [dsv](https://github.com/mbostock/dsv) by Mike Bostock
