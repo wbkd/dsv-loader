@@ -5,6 +5,7 @@
     "name": "Christopher Moeller @chrtze"
   },
   "dependencies": {
+    "dsv": "0.0.4",
     "loader-utils": "^0.2.6"
   }
 }
