@@ -11,5 +11,5 @@ module.exports = function(text) {
       parser = dsv(delimiter),
       res = parser.parse(text);
 
-  return "module.exports = " + JSON.stringify(res, undefined, "\t");
+  return "module.exports = " + JSON.stringify(res);
 }
