@@ -12,8 +12,8 @@
     "url" : "https://github.com/wbkd/dsv-loader/issues"
   },
   "dependencies": {
-    "dsv": "0.0.4",
-    "loader-utils": "^0.2.6"
+    "d3-dsv": "0.1.12",
+    "loader-utils": "^0.2.12"
   },
   "repository": {
     "type": "git",
