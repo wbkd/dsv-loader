@@ -2,7 +2,7 @@
     built using dsv by Mike Bostock */
 
 var loaderUtils = require('loader-utils');
-var dsv = require('dsv');
+var dsv = require('d3-dsv');
 
 module.exports = function(text) {
 
