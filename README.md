@@ -28,7 +28,7 @@ To require dsv files like this: ```require('data.csv')``` , you can add the dsv-
 ``` javascript
 module : {
   loaders : [
-    { test: /\.csv?$/, loader: 'dsv-loader' } //will load all .csv files with dsv-loader by default
+    { test: /\.csv$/, loader: 'dsv-loader' } //will load all .csv files with dsv-loader by default
   ]
 }
 ```
