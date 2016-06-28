@@ -2,15 +2,16 @@
     built using dsv by Mike Bostock */
 
 var loaderUtils = require('loader-utils');
-var dsv = require('d3-dsv').dsv;
+var dsvFormat = require('d3-dsv').dsvFormat;
 
 module.exports = function(text) {
   this.cacheable();
   
   var query = loaderUtils.parseQuery(this.query),
       delimiter = query.delimiter || ',',
-      parser = dsv(delimiter),
-      res = parser.parse(text);
+      dsv = dsvFormat(delimiter),
+      rows = query.rows,
+      res = rows ? dsv.parseRows(text) : dsv.parse(text);
 
   return 'module.exports = ' + JSON.stringify(res);
 }
