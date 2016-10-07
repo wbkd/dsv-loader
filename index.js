@@ -13,5 +13,7 @@ module.exports = function(text) {
       rows = query.rows,
       res = rows ? dsv.parseRows(text) : dsv.parse(text);
 
-  return 'module.exports = ' + JSON.stringify(res);
+  return 'var res = ' + JSON.stringify(res) + ';' +
+    'res.columns = ' + JSON.stringify(res.columns) + ';' +
+    'module.exports = res;';
 }
