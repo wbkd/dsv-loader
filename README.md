@@ -40,10 +40,24 @@ module : {
 Tells the loader which delimiter is used to seperate the data. *Default: ','*
 
 Examples:
-``` javascript
+
+```javascript
 var data = require('dsv?delimiter=;!./data.csv'); //load data seperated by semicolon
 
 var data = require('dsv?delimiter=x!./data.csv'); //load data seperated by an 'x'
+```
+
+## Example
+data.csv
+
+| Hello | World |
+| ----- | ----- |
+| 42    | "fish"|
+| foo   | bar   |
+
+
+``` javascript
+var data = require(data.csv) //[{"Hello": "42", "World": "fish"}, {"Hello": "foo", "World": "bar"}, columns: ["Hello", "World"]]
 ```
 
 ## Credits
