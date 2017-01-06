@@ -33,6 +33,10 @@ module : {
 }
 ```
 
+---
+
+**Note**: Do not use both the `webpack.config` setup and the `dsv!` prefix to load DSV data, or it will be parsed twice. When loading anything other than CSV data, the `dsv!delimiter=x` option should be used and no modifications to the `webpack.config` file should be made.
+
 #### Options
 
 **delimiter**
