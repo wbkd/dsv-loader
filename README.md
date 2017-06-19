@@ -15,7 +15,7 @@ npm install --save dsv-loader
 You can require dsv data like this:
 
 ``` javascript
-var data = require('dsv!./data.csv');
+var data = require('dsv-loader!./data.csv');
 // => returns data.csv content as json parsed object
 ```
 
@@ -42,9 +42,9 @@ Tells the loader which delimiter is used to seperate the data. *Default: ','*
 Examples:
 
 ```javascript
-var data = require('dsv?delimiter=;!./data.csv'); //load data seperated by semicolon
+var data = require('dsv-loader?delimiter=;!./data.csv'); //load data seperated by semicolon
 
-var data = require('dsv?delimiter=x!./data.csv'); //load data seperated by an 'x'
+var data = require('dsv-loader?delimiter=x!./data.csv'); //load data seperated by an 'x'
 ```
 
 ## Example
