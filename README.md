@@ -7,7 +7,7 @@ A Webpack plugin for loading dsv files (for example .csv).
 Install via npm:
 
 ```
-npm install --save dsv-loader
+npm install --save-dev dsv-loader
 ```
 
 ## Usage
@@ -15,8 +15,7 @@ npm install --save dsv-loader
 You can require dsv data like this:
 
 ``` javascript
-var data = require('dsv-loader!./data.csv');
-// => returns data.csv content as json parsed object
+const data = require('dsv-loader!./data.csv');
 ```
 
 The loader will translate the ```data.csv``` file into a JSON Object.
@@ -25,11 +24,12 @@ The loader will translate the ```data.csv``` file into a JSON Object.
 
 To require dsv files like this: ```require('data.csv')``` , you can add the dsv-loader to your webpack config:
 
-``` javascript
-module : {
-  loaders : [
-    { test: /\.csv$/, loader: 'dsv-loader' } //will load all .csv files with dsv-loader by default
-  ]
+```javascript
+module: {
+  rules: [{
+    test: /\.(c|d|t)sv$/, // load all .csv, .dsv, .tsv files with dsv-loader
+    use: ['dsv-loader'] // or dsv-loader?delimiter=,
+  }]
 }
 ```
 
@@ -41,10 +41,10 @@ Tells the loader which delimiter is used to seperate the data. *Default: ','*
 
 Examples:
 
-```javascript
-var data = require('dsv-loader?delimiter=;!./data.csv'); //load data seperated by semicolon
+``` javascript
+const data = require('dsv-loader?delimiter=;!./data.csv'); //load data seperated by semicolon
 
-var data = require('dsv-loader?delimiter=x!./data.csv'); //load data seperated by an 'x'
+const data = require('dsv-loader?delimiter=x!./data.csv'); //load data seperated by an 'x'
 ```
 
 ## Example
@@ -57,7 +57,7 @@ data.csv
 
 
 ``` javascript
-var data = require(data.csv) //[{"Hello": "42", "World": "fish"}, {"Hello": "foo", "World": "bar"}, columns: ["Hello", "World"]]
+const data = require(data.csv) //[{"Hello": "42", "World": "fish"}, {"Hello": "foo", "World": "bar"}, columns: ["Hello", "World"]]
 ```
 
 ## Credits
