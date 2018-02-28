@@ -33,6 +33,21 @@ module: {
 }
 ```
 
+
+## Example
+data.csv
+
+| Hello | World |
+| ----- | ----- |
+| 42    | "fish"|
+| foo   | bar   |
+
+
+``` javascript
+const data = require(data.csv) //[{"Hello": "42", "World": "fish"}, {"Hello": "foo", "World": "bar"}, columns: ["Hello", "World"]]
+```
+
+
 #### Options
 
 **delimiter**
@@ -47,18 +62,18 @@ const data = require('dsv-loader?delimiter=;!./data.csv'); //load data seperated
 const data = require('dsv-loader?delimiter=x!./data.csv'); //load data seperated by an 'x'
 ```
 
-## Example
-data.csv
+**rows**
 
-| Hello | World |
-| ----- | ----- |
-| 42    | "fish"|
-| foo   | bar   |
+Tells the loader if it should use the first row as columns row. *Default: Yes*
 
+Examples:
 
 ``` javascript
-const data = require(data.csv) //[{"Hello": "42", "World": "fish"}, {"Hello": "foo", "World": "bar"}, columns: ["Hello", "World"]]
+const data = require('dsv-loader!./data.csv'); //[{"Hello": "42", "World": "fish"}, {"Hello": "foo", "World": "bar"}, columns: ["Hello", "World"]]
+
+const data = require('dsv-loader?rows!./data.csv'); //[{"Hello": "World"}, { "42": "fish"},{ "foo": "bar"}
 ```
+
 
 ## Credits
 
