@@ -6,11 +6,11 @@ var dsvFormat = require('d3-dsv').dsvFormat;
 
 module.exports = function(text) {
   this.cacheable();
-  
-  var query = loaderUtils.parseQuery(this.query),
-      delimiter = query.delimiter || ',',
+
+  var options = loaderUtils.getOptions(this) || {},
+      delimiter = options.delimiter || ',',
       dsv = dsvFormat(delimiter),
-      rows = query.rows,
+      rows = options.rows,
       res = rows ? dsv.parseRows(text) : dsv.parse(text);
 
   return 'var res = ' + JSON.stringify(res) + ';' +
